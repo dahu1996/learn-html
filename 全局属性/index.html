@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accesskey属性</title>
+    <style type="text/css">
+        .box {
+            width: 100px;
+            height: 100px;
+            background: rgb(13, 216, 252);
+        }
+        .dragbox {
+            width: 200px;
+            height: 200px;
+        }
+        #box {
+            margin-top: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <button accesskey='n' tabindex="-1" onclick="console.log(1)">accesskey属性 按下alt+n组合键相当于点击了button</button>
+    <div class="box">class属性，class属性本身没有任何作用</div>
+    <p tabindex="-1" contenteditable="true">contenteditable属性 修改页面内容</p>
+    <p dir="rtl">dir是用来规定文字方向，ltr：从左到右，rtl：从右到左</p>
+    <div class="dragbox">
+        <div class="box1" draggable="true">box1</div>
+        <div class="box2" dropzone>box2</div>
+    </div>
+
+    <div hidden>hidden属性</div>
+    <div id="box">id属性，能用来导航到文档中的特殊位置example.html#myelement URL片段标识符</div>
+
+    <p lang="en">hello</p>
+    <p lang="zh">lang属性用于说明元素中使用的语言</p>
+
+    <textarea tabindex="-1" spellcheck="true">spellcheck属性用来表示浏览器是否对元素内容进行拼写检查，属性只有用在用户可编辑元素上才有意义</textarea>
+
+    <p style="font-size: 12px; font-weight: bold; font-family: Helvet; background-color: antiquewhite;">style属性用于定义行内css样式</p>
+
+    <div class="tabindex">
+        <button tabindex="2">tabindex2</button>
+        <button tabindex="1">tabindex1</button>
+        <button tabindex="3">tabindex3</button>
+    </div>
+</body>
+</html>

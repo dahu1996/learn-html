@@ -1,0 +1,232 @@
+/* rest css begin */
+html {
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+body, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, p, blockquote, th, td {
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: content-box;
+    background-color: #FFFFFF;
+    color: #666666;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    padding: 0 0px;
+    text-align: left;
+}
+select {
+    font-size: 12px;
+}
+table {
+    border-collapse: collapse;
+}
+fieldset, img {
+    border: 0 none;
+}
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+fieldset p {
+    margin: 0;
+    padding: 0 0 0 8px;
+}
+legend {
+    display: none;
+}
+address, caption, em, strong, th, i {
+    font-style: normal;
+    font-weight: 400;
+}
+table caption {
+    margin-left: -1px;
+}
+hr {
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #E4E4E4;
+    border-width: 1px 0;
+    clear: both;
+    height: 2px;
+    margin: 5px 0;
+    overflow: hidden;
+}
+ol, ul {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+}
+caption, th {
+    text-align: left;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+}
+/* rest css end */
+
+/* 预定义变量 */
+:root {
+    font-size: 100px;
+    --background-color: #e5e5e5;
+    --color1: #EC3E27;
+    --color2: #fd79a8;
+    --color3: #0984e3;
+    --color4: #00b894;
+    --color5: #fdcb6e;
+    --color6: #e056fd;
+    --color7: #F97F51;
+    --color8: #BDC581;
+    --color9: #f1f1f1;
+}
+
+/* 图标样式 */
+@font-face {
+    font-family: "iconfont";
+    src: url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2');
+}
+
+.icon {
+    font-family: "iconfont" !important;
+    font-size: 0.16rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-photo:before {
+    content: "\e652";
+}
+
+.icon-doc:before {
+    content: "\e609";
+}
+
+.icon-video:before {
+    content: "\e93e";
+}
+
+.icon-shopping-cart:before {
+    content: "\e600";
+}
+
+.icon-category:before {
+    content: "\e601";
+}
+
+.icon-my:before {
+    content: "\e602";
+}
+
+.icon-home:before {
+    content: "\e603";
+}
+
+
+/* 核心样式 */
+#app {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color9);
+}
+.tab_bar {
+    position: fixed;
+    left: 0;
+    bottom: 0.05rem;
+    width: 100%;
+    height: 0.5rem;
+    background-color: #fefefe;
+    border-radius: 0.1rem;
+    box-shadow: 0 0 10px rgba(65, 65, 65, 0.144);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tab_bar .tab {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tab>i {
+    font-size: 0.3rem;
+}
+.tab>i:hover {
+    color: var(--color1);
+}
+.tab .middle {
+    position: relative;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color3);
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 5px solid var(--color9);
+    transition: ease-in-out 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.middle::before,
+.middle::after {
+    content: '';
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    width: 70%;
+    height: 3px;
+    /* margin: -1px 0 0 -35%; */
+    border-radius: 3px;
+    background-color: #fff;
+    transition: ease-in-out 0.3s;
+}
+.middle::before {
+    transform: rotate(90deg);
+}
+.tab .middle.open {
+    background-color: var(--color7);
+}
+.tab .middle.open:before {
+    transform: rotate(135deg);
+}
+.tab .middle.open::after {
+    transform: rotate(45deg);
+}
+
+.middle .add {
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    display: block;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 0 20px rgba(114, 114, 114, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 解决flex布局下，子元素宽度设置无效的问题 */
+    flex-shrink: 0;
+    background-color: #fff;
+}
+.middle.open .add {
+    visibility: visible;
+    opacity: 1;
+    transform: rotate(var(--angle)) translateY(-0.56rem);
+
+}
+.middle.open .add>i {
+    font-size: 0.2rem;
+}
+.middle.open .add:hover {
+    background-color: var(--color7);
+}
+.middle.open .add:hover > i {
+    color: #fff;
+}

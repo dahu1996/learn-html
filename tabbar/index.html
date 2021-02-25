@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>手机底部栏</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!-- 设置视口属性 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- 禁止手机将特定长度数字识别为手机号码 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- safari私有属性 允许全屏模式浏览，隐藏浏览器导航栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="app">
+        <section class="tab_bar">
+            <div class="tab">
+                <i class="icon icon-home"></i>
+            </div>
+            <div class="tab">
+                <i class="icon icon-category"></i>
+            </div>
+            <div class="tab">
+                <div class="middle">
+                    <div style="--angle:-45deg" class="add"><i class="icon icon-photo"></i></div>
+                    <div style="--angle:0deg" class="add"><i class="icon icon-doc"></i></div>
+                    <div style="--angle:45deg" class="add"><i class="icon icon-video"></i></div>
+                </div>
+            </div>
+            <div class="tab">
+                <i class="icon icon-shopping-cart"></i>
+            </div>
+            <div class="tab">
+                <i class="icon icon-my"></i>
+            </div>
+        </section>
+    </div>
+    <script src="./index.js"></script>
+    <script>
+        const middle = document.querySelector('.tab .middle');
+        let timer = null;
+        middle.addEventListener('click', event => {
+            // event.preventDefault();
+            let target = event.target;
+            if (target.classList.contains('middle')) {
+                // 点击加号button
+                target.classList.toggle('open');
+            } else {
+                // 点击video，doc，photo button
+                // if (target.tagName.toLowerCase() === 'li') {
+                //     target = target.parentNode;
+                // }
+                // console.log(target);
+                // target.parentNode.classList.remove('open');
+                if (timer) {
+                    clearTimeout(timer);
+                }
+                timer = setTimeout(() => middle.classList.remove('open'), 300);
+            }
+        })
+
+    </script>
+</body>
+</html>
