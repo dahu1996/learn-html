@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文档分节</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header class="header clearfix">
+      表示一节的首部，通常为刊头或徽标
+      <nav>
+        <ol>
+          <li><a href="#content1">content1</a></li>
+          <li><a href="#content2">content2</a></li>
+          <li><a href="#content3">content3</a></li>
+          <li><a href="#content4">content4</a></li>
+          <li><a href="#content5">content5</a></li>
+        </ol>
+      </nav>
+    </header>
+    <section class="container clearfix">
+      <aside>侧边栏</aside>
+      <article class="clearfix">
+        <header class="article-header">
+          <hgroup>
+            <h1>标题组--主标题</h1>
+            <!-- <section> -->
+            <!-- 在使用article、section后浏览器会负责整理顺标题元素的层次关系 -->
+            <!-- <h1>标题组--副标题</h1>
+            </section> -->
+            <!-- 在section、article中连续使用h1、h2等导致渲染字体大小有问题 -->
+            <h2>标题组--副标题</h2>
+          </hgroup>
+        </header>
+        <sction id="content1">
+          <p>这是一段内容1</p>
+        </sction>
+        <sction id="content2">
+          <p>这是一段内容2</p>
+        </sction>
+        <sction id="content3">
+          <p>这是一段内容3</p>
+        </sction>
+        <sction id="content4">
+          <p>这是一段内容4</p>
+        </sction>
+        <sction id="content5">
+          <p>这是一段内容5</p>
+        </sction>
+        <footer>更消息请参考</footer>
+      </article>
+    </section>
+    <footer class="footer">
+      表示一节的尾部，通常为总结信息或作者，版权信息等
+      <!-- address用于表示地址、email等信息 -->
+      <address>北京市朝阳区</address>
+    </footer>
+  </body>
+</html>
