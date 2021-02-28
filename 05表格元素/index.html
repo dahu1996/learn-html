@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表格元素</title>
+    <style>
+      td {
+        min-width: 4em;
+        text-align: center;
+        line-height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <!-- 支持表格内容的核心元素 -->
+      <caption>
+        表格标题
+      </caption>
+      <thead>
+        <tr>
+          <th>表头</th>
+          <th>表头</th>
+          <th>表头</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- 行元素 -->
+          <td colspan="2" rowspan="2" headers="30">11</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <!-- <td>22</td> -->
+          <td>23</td>
+          <!-- <td>23</td> -->
+          <!-- <td>23</td> -->
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
