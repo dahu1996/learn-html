@@ -9,6 +9,8 @@
     <!-- 搜索引擎处理：noindex 表示不要索引本页、noarchive 不要存档或缓存本页、nofollow 不要顺着本页中的链接继续搜索下去 -->
     <meta name="robots" content="noindex" />
     <meta charset="UTF-8">
+    <!-- refresh default-style content-type  -->
+    <!-- <meta http-equiv="refresh" content="2" /> -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 用来设置基准url，让HTML文档中的相对链接在此基础上进行解析 -->
@@ -40,5 +42,8 @@
     </section>
 
     <a href="index.html">static/index.html</a>
+    <script>
+        document.write((new Date()).toLocaleString());
+    </script>
 </body>
 </html>
