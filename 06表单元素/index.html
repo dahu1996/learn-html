@@ -9,12 +9,18 @@
   <body>
     <!-- 数据发送地址，表单编码方式, 为服务器的反馈信息指定显示位置 -->
     <form
-      action="/"
+      action=""
       enctype="application/json"
       target="_blank"
       name="from-demo"
+      id="votefrom"
     >
-      <fieldset legend="person">
+      <!-- fieldset 对表单进行编组 -->
+      <!-- disabled属性能够禁止整个input组被禁用 -->
+      <!-- legend fieldset说明属性 -->
+      <fieldset legend="person" disabled>
+        <!-- fieldset 说明标签且必须是第一个子元素 -->
+        <legend>this is a fieldset label</legend>
         <div><label for="name">姓名</label><input id="name" type="text" /></div>
         <div>
           <label for="nikename">昵称</label><input id="nikename" type="text" />
@@ -22,7 +28,25 @@
         <div>
           <label for="hobby">爱好</label><input id="hobby" type="text" />
         </div>
+        <button type="reset">reset</button>
       </fieldset>
+      <fieldset legend="otherpersion">
+        <div><label for="name">姓名</label><input id="name" type="text" autocomplete="off" autofocus /></div>
+        <div>
+          <label for="nikename">昵称</label><input id="nikename" type="text" disabled />
+        </div>
+        <div>
+          <label for="hobby">爱好</label><input id="hobby" type="text" />
+        </div>
+        <button type="reset">reset</button>
+      </fieldset>
+      <!-- button type reset submit button -->
+      <!-- 此按钮会覆盖from表单action等，fromonvalid表示是否执行客户端数据有效性检查 -->
+      <!-- <button formaction="" formtarget="" formmethod="" formenctype="" fromonvalid="">test</button> -->
     </form>
+    <!-- input、button等其他表单元素定义一个form属性，设置未form表单中的id值
+    此时就与其非祖先元素的form挂钩 -->
+    <input form="votefrom" type="submit" value="confirm" />
+    <input form="votefrom" type="reset" value="reset" />
   </body>
 </html>

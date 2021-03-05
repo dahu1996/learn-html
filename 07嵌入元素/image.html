@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嵌入图片</title>
+</head>
+<body>
+    <h1>图像</h1>
+    <!-- src 嵌入图像url -->
+    <!-- alt img备用信息，图片无法被显示的时候显示该文字-->
+    <!-- height 图像尺寸 px -->
+    <!-- width 图像尺寸 px -->
+    <!-- usemap -->
+    <!-- ismap -->
+    <img src="1.jfif" width="500px" ismap />
+    <div style="width: 500px;">
+        <!-- img 常与 a 标签结合使用 -->
+        <a href="./iframe.html">
+            <!-- 添加ismap属性就会常见一个服务器分区响应,在图像点击位置会附加到url上 -->
+            <!-- 服务器端分区响应图通常意味着服务器会根据用户在图像上点击差别反应 -->
+            <img src="1.jfif" ismap width="100%"/>
+        </a>
+    </div>
+    <article>
+        <header>
+            <h1 style="font-size: 1.25rem;">客户端区别响应图</h1>
+            <h2 style="font-size: 1rem;">通过点击某张图片上的不同区域导航至不同url</h2>
+        </header>
+        <section>
+             <img src="1.jfif" width="500px" usemap="#mymap" />
+             <map name="mymap">
+                <area href="./iframe.html?id=1" shape="rect" coords="3, 5, 68, 62" alt="游泳"/>
+                <area href="./iframe.html?id=2" shape="rect" coords="70, 3, 130, 62" alt="游泳"/>
+                <area href="./iframe.html?id=3" shape="default" alt="游泳"/>
+             </map>
+        </section>
+    </section>
+
+</body>
+</html>

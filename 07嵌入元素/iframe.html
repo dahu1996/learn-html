@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        p, li {
+            text-indent: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Iframe Demo</h1>
+        <p>iframe允许在现有HTML文档中嵌入另一张文档</p>
+        <p>属性包括: <em>src</em> <em>srdoc</em> <em>name</em> <em>height</em> <em>sandbox</em> <em>seamless</em>,其中sandbox seamless 是html5新增</p>
+        <nav>
+            <ul>
+                <li><a href="./image.html" target="myframe">imgae元素</a></li>
+                <li><a href="./embed.html" target="myframe">embed元素</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <style>
+            iframe[name=myframe] {
+                width: 100vw;
+                /* height: 100vh; */
+                /* height: auto; */
+            }
+        </style>
+        <p>创建name属性未myframe的iframe,就相当于常见了一个名为myframe的浏览上下文,可以把这个浏览器上下文与其他元素(a form button input以及base)和target属性结合使用</p>
+        <section>
+            <h1>iframe相关属性</h1>
+        </section>
+        <p>src属性指定iframe一开始加载并显示的URL</p>
+        <p>seamless 指示浏览器把iframe的内容显示的想主html文档的一个整体组成部分</p>
+        <p>
+            sandbox 对HTML文档进行限制，下面这些元素会被禁用
+            allow-forms\allow-script\allow-top-navigation\allow-same-origin
+            <ul>
+                <li>脚本</li>
+                <li>表单</li>
+                <li>插件</li>
+            </ul>
+        </p>
+        <iframe name="myframe" seamless sandbox="allow-forms"></iframe>
+    </section>
+</body>
+</html>
